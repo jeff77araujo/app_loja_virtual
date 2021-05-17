@@ -5,61 +5,93 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/shape_degrade"
-        android:orientation="vertical"
-        android:padding="20dp"
-        tools:context=".form.FormLogin">
+        android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/edit_email"
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/layout_login"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
-            android:background="@drawable/shape_edit_text"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="15dp" />
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_degrade"
+            android:orientation="vertical"
+            android:padding="20dp"
+            tools:context=".form.FormLogin">
 
-        <EditText
-            android:id="@+id/edit_password"
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/shape_edit_text"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_edit_text"
+                android:hint="Password"
+                android:inputType="numberPassword"
+                android:padding="15dp" />
+
+            <Button
+                android:id="@+id/btn_enter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/av"
+                android:padding="15dp"
+                android:text="Entrar"
+                android:textSize="20sp"
+                app:cornerRadius="32dp"
+                app:strokeColor="@color/white"
+                app:strokeWidth="0dp" />
+
+            <TextView
+                android:id="@+id/text_for_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="Crie uma conta clicando AQUI"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameL"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/shape_edit_text"
-            android:hint="Password"
-            android:inputType="numberPassword"
-            android:padding="15dp" />
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/purple_500">
 
-        <Button
-            android:id="@+id/btn_enter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="@color/av"
-            android:padding="15dp"
-            android:text="Entrar"
-            android:textSize="20sp"
-            app:cornerRadius="32dp"
-            app:strokeColor="@color/white"
-            app:strokeWidth="0dp" />
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/white"/>
 
-        <TextView
-            android:id="@+id/text_for_register"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="30dp"
-            android:fontFamily="sans-serif-black"
-            android:gravity="center"
-            android:text="Crie uma conta clicando AQUI"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Carregando..."
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:fontFamily="sans-serif-black"
+                android:layout_marginTop="450dp"
+                android:gravity="center"/>
 
-    </LinearLayout>
+        </FrameLayout>
+
+    </FrameLayout>
 
 </androidx.core.widget.NestedScrollView>
