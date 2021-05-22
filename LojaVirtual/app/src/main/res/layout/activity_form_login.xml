@@ -47,6 +47,7 @@
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/av"
                 android:padding="15dp"
+                android:fontFamily="sans-serif-black"
                 android:text="Entrar"
                 android:textSize="20sp"
                 app:cornerRadius="32dp"

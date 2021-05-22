@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LojaVirtual">
+        <activity android:name=".fragments.RegisterProducts"></activity>
         <activity
             android:name=".PrincipalScreen"
             android:label="@string/title_activity_principal_screen"
-            android:theme="@style/Theme.LojaVirtual.NoActionBar"></activity>
+            android:theme="@style/Theme.LojaVirtual.NoActionBar" />
         <activity android:name=".form.FormRegister" />
         <activity android:name=".form.FormLogin" />
         <activity android:name=".MainActivity" />
